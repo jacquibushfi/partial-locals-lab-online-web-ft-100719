@@ -13,11 +13,11 @@ class StudentsController < ApplicationController
   end
 
   def edit
-    @student = Student.find(params[:id])
+    @student = Student.find_by(id: params[:id])
   end
 
   def show
-    @student = Student.find(params[:id])
+    @student = Student.find_by(id: params[:id])
   end
 
   def index
